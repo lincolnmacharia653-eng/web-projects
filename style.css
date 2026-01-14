@@ -1,0 +1,59 @@
+
+body{
+    background-color: rgba(255,0,0,0.4);
+}
+form{
+    background-color: rgba(54, 130, 30, 0.6);
+    border: 1.4px solid gray;
+    border-radius: 30px;
+    max-width: 400px;
+    text-align: center;
+    border-style: groove;
+   
+
+    
+
+}
+input{
+    width: 80%;
+    padding: 12px;
+    background-color: aqua;
+    border: 2px white;
+    border-radius: 30px;
+}
+
+label{
+    color: rgba(0,0,0,0.5);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: rgb(28, 16, 96);
+   
+}
+
+form, p{
+    color: blue;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+button{
+    background-color: green;
+    border-radius: 30px;
+    color: white;
+    font-size: 25px;
+    padding: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-bottom: 3px;
+
+}
+
+button:hover{
+    background-color: blue;
+    
+}
+
+.hidden{
+    display: none;
+}
+#show2{
+    margin-bottom: 20px;
+}
