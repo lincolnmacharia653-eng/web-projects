@@ -1,0 +1,63 @@
+<!Doctype html>
+<html>
+<head>
+<title>Battery api</title>
+<style>
+    body{
+         margin: 0;
+         margin-top: 100px;
+         background: rgba(20, 30, 128, 0.5);
+    }
+.container{
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(0,0,0,1);
+        width: 200px;
+        margin: auto;
+        border-radius: 10px 50px;
+       
+    }
+h2{
+    text-align: center;
+    color: dodgerblue;
+    text-transform: uppercase;
+}
+
+.container p{
+    color: whitesmoke;
+    text-align: center;
+    font-size: 20px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h2>Battery status</h2>
+
+<p id="level">Battery Level: loading</p>
+
+<p id="charging">Charging: loading...</p>
+
+</div>
+
+
+<script>
+
+navigator.getBattery().then(function(battery){
+function updateBatteryInfo(){
+   let y = document.getElementById("level").innerText = "Battery level: " + Math.round(battery.level *100) + "%";
+
+    document.getElementById("charging").innerText= "charging: " + (battery.charging ? "Yes" : "No");
+
+}
+
+
+
+updateBatteryInfo();
+battery.addEventListener("levelchange", updateBatteryInfo);
+battery.addEventListener("chargingchange", updateBatteryInfo)
+
+})
+</script>
+</body>
+</html>
